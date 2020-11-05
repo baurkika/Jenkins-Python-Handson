@@ -47,6 +47,13 @@ pipeline{
                 sh "docker tag baurkika/handson-jenkins:latest 058443149739.dkr.ecr.us-east-1.amazonaws.com/baurkika/handson-jenkins:latest"
             }
         }
+        stage('push'){
+            agent any
+            steps{
+                sh "aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 058443149739.dkr.ecr.us-east-1.amazonaws.com"
+                sh "docker push 058443149739.dkr.ecr.us-east-1.amazonaws.com/baurkika/handson-jenkins:latest"
+            }
+        }
 
     }
 }
