@@ -40,7 +40,13 @@ pipeline{
                 }
             }
         }
-
+        stage('build'){
+            agent any
+            steps{
+                sh "docker build -t matt/handson-jenkins ."
+                sh "docker tag matt/handson-jenkins:latest 046402772087.dkr.ecr.us-east-1.amazonaws.com/matt/handson-jenkins:latest"
+            }
+        }
 
     }
 }
