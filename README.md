@@ -1,4 +1,4 @@
-# Hands-on Jenkins-03 : Building Jenkins Pipelines on Amazon Linux 2 AWS EC2 Instance
+# Hands-on Jenkins-04 : Building Jenkins Pipelines on Amazon Linux 2 AWS EC2 Instance
 
 Purpose of the this hands-on training is to teach the students how to build Jenkins jobs on Amazon Linux 2 EC2 instance, how to integrate GitHub with Jenkins, how to integrate Docker as an agent, how to use tests in a stage, how to push images to AWS ECR and how to manage a multi-container application with docker-compose.  
 
